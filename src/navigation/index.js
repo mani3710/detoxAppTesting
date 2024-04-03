@@ -64,17 +64,18 @@ const App = () => {
                     options={{
                         headerShown: false,
                         tabBarAccessibilityLabel: "HomeNav",
-                        tabBarIcon: ({ focused }) => {
-                            return (
-                              <TouchableOpacity>
-                                <Image
-                                  source={{uri:"https://cdn-icons-png.flaticon.com/512/25/25694.png"}}
-                                  resizeMode="contain"
-                                  style={{ width: 25,height:25 }}
-                                />
-                              </TouchableOpacity>
-                            );
-                          },
+                        tabBarTestID:"homenavigationid"
+                        // tabBarIcon: ({ focused }) => {
+                        //     return (
+                        //       <TouchableOpacity>
+                        //         <Image
+                        //           source={{uri:"https://cdn-icons-png.flaticon.com/512/25/25694.png"}}
+                        //           resizeMode="contain"
+                        //           style={{ width: 25,height:25 }}
+                        //         />
+                        //       </TouchableOpacity>
+                        //     );
+                        //   },
                         
                     }}
                     name={Routes.HomeStackNav} component={HomeStackNav} />
@@ -83,19 +84,20 @@ const App = () => {
                     options={{ 
                         headerShown: false,
                         tabBarAccessibilityLabel: "CitiesNavigation",
-                        tabBarIcon: ({ focused }) => {
-                            return (
-                              <TouchableOpacity onPress={()=>{
-                                console.log("mani")
-                              }}>
-                                <Image
-                                  source={{uri:"https://cdn-icons-png.flaticon.com/512/25/25694.png"}}
-                                  resizeMode="contain"
-                                  style={{ width: 25,height:25 }}
-                                />
-                              </TouchableOpacity>
-                            );
-                          },
+                        tabBarTestID:"citiesnavigationid"
+                        // tabBarIcon: ({ focused }) => {
+                        //     return (
+                        //       <TouchableOpacity onPress={()=>{
+                        //         console.log("mani")
+                        //       }}>
+                        //         <Image
+                        //           source={{uri:"https://cdn-icons-png.flaticon.com/512/25/25694.png"}}
+                        //           resizeMode="contain"
+                        //           style={{ width: 25,height:25 }}
+                        //         />
+                        //       </TouchableOpacity>
+                        //     );
+                        //   },
                       
                     }}
                     name={Routes.Cities} component={Screens.Cities} />
