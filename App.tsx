@@ -43,13 +43,19 @@ const App = (props) => {
         }}>
         <Text style={styles.labelStyle} testID='homeSectionText-Counters'>COUNTERS</Text>
       </TouchableOpacity>
-      <Icon name="rocket" size={30} color="#900" />
+      <Icon 
+      // testID="rocketIcon"
+      testID='rocketIcon'
+      onPress={()=>{
+        console.log("maniii") 
+      }}
+      name="rocket" size={30} color="#900" />
       <TouchableOpacity
-     
+     accessibilityLabel={"Member"} 
         style={styles.containerStyle}
         onPress={() => {
            console.log("Counter is Members"); 
-          props.navigation.navigate(Routes.MemberList);
+        //  props.navigation.navigate(Routes.MemberList);
   
         }}>
         <Text style={styles.labelStyle} testID='homeSectionText-Members'>Member List</Text>

@@ -1,14 +1,14 @@
 Feature: Advanced Matchers
     Element can be match dynamically and navigation element can be located
     # @advanced_matchers @dynamically
-    # Scenario: Home section element match dynamically
-    #     Given I tap on the "<section>" section
-    #     Examples:
-    #         | section   |
-    #         | Counters  |
-    #         | Members   |
-    #         | Cities    |
-    #         | Animation |
+    Scenario: Home section element match dynamically
+        Given I tap on the "<section>" section
+        Examples:
+            | section   |
+            | Counters  |
+            | Members   |
+            | Cities    |
+            | Animation |
 
     # Scenario: Home section extra element match dynamically
     #     Given I tap on the "<extra>" extra section 
@@ -16,7 +16,7 @@ Feature: Advanced Matchers
     #         | extra   |
     #         | 1  |
     #         | 2  |   
-
+  
     #  @advanced_matchers @dynamically
     # Scenario: Home section element match dynamically
     #     Given I tap on the "Cities" section

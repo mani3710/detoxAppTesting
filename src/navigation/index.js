@@ -1,5 +1,6 @@
 import * as React from 'react';
 import 'react-native-gesture-handler';
+import {Image,TouchableOpacity} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -62,7 +63,19 @@ const App = () => {
  
                     options={{
                         headerShown: false,
-                        tabBarAccessibilityLabel: "HomeNav"
+                        tabBarAccessibilityLabel: "HomeNav",
+                        tabBarIcon: ({ focused }) => {
+                            return (
+                              <TouchableOpacity>
+                                <Image
+                                  source={{uri:"https://cdn-icons-png.flaticon.com/512/25/25694.png"}}
+                                  resizeMode="contain"
+                                  style={{ width: 25,height:25 }}
+                                />
+                              </TouchableOpacity>
+                            );
+                          },
+                        
                     }}
                     name={Routes.HomeStackNav} component={HomeStackNav} />
                 <Tab.Screen
@@ -70,6 +83,19 @@ const App = () => {
                     options={{ 
                         headerShown: false,
                         tabBarAccessibilityLabel: "CitiesNavigation",
+                        tabBarIcon: ({ focused }) => {
+                            return (
+                              <TouchableOpacity onPress={()=>{
+                                console.log("mani")
+                              }}>
+                                <Image
+                                  source={{uri:"https://cdn-icons-png.flaticon.com/512/25/25694.png"}}
+                                  resizeMode="contain"
+                                  style={{ width: 25,height:25 }}
+                                />
+                              </TouchableOpacity>
+                            );
+                          },
                       
                     }}
                     name={Routes.Cities} component={Screens.Cities} />
