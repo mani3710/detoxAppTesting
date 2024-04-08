@@ -34,12 +34,13 @@ const HomeStackNav = ({ navigation }) => {
                     headerTitle: (props) => <Text {...props} testID='MemberHeaderId' />,
                     headerRight: () => (
                         <Button
-                            onPress={() => {
+                            onPress={() => { 
                                 navigation.navigate(Routes.AddMember)
                             }}
                             title="Add"
                             color="#000"
                             testID='MemberHeaderAddMemberButton'
+                            accessibilityLabel='addMemberLabel'
 
 
                         />

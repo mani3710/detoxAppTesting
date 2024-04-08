@@ -55,7 +55,7 @@ const App = (props) => {
         style={styles.containerStyle}
         onPress={() => {
            console.log("Counter is Members"); 
-        //  props.navigation.navigate(Routes.MemberList);
+          props.navigation.navigate(Routes.MemberList);
   
         }}>
         <Text style={styles.labelStyle} testID='homeSectionText-Members'>Member List</Text>
@@ -87,7 +87,7 @@ const App = (props) => {
       //props.navigation.navigate(Routes.Home)
 
      }}>
-     <Text style={styles.labelStyle}testID='extraSteps-1'>Extra1</Text>
+     <Text style={styles.labelStyle} testID='extraSteps-1'>Extra1</Text>
    </TouchableOpacity>
    <TouchableOpacity
      style={styles.containerStyle}
@@ -96,7 +96,7 @@ const App = (props) => {
       //props.navigation.navigate(Routes.Home)
 
      }}>
-     <Text style={styles.labelStyle}testID='extraSteps-2'>Extra2</Text>
+     <Text style={styles.labelStyle} testID='extraSteps-2'>Extra2</Text>
    </TouchableOpacity>
     
 

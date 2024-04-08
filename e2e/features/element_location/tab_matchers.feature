@@ -1,14 +1,16 @@
 Feature: Tabbar naviagtion
 
-   Taping tab bar icon and locate by id
+    Taping tab bar icon and locate by id
 
-   @tab @iconlocator
-   Scenario: I locate tab Bar by id
-    Given I locate <Tab> bar
+    #    @tabmatcher @iconlocatorTab
+    #    Scenario: I locate tab Bar by id
+    #     Given I locate "<section>" bar by tabid
 
-    Examples:
-        |Tab| 
-        |citiesnavigationid| 
-        |homenavigationid|
-        |citiesnavigationid|
-          
+
+    #     Examples:
+    #         |section|
+    #         |citiesnavigationid|
+    #         |homenavigationid|
+    #         |citiesnavigationid|
+
+   
