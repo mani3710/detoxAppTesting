@@ -30,7 +30,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import CommonInputView from './textInputComp';
-const {height,width} = Dimensions.get("screen");
+const { height, width } = Dimensions.get("screen");
 const AddMember = (props) => {
   const [name, setName] = useState("");
   const [surename, setSurename] = useState("");
@@ -39,53 +39,88 @@ const AddMember = (props) => {
   const [addressLine1, setAddressLine1] = useState("");
   const [addressLine2, setAddressLine2] = useState("");
   const [city, setCity] = useState("");
+  const [postalCode, setPostalCode] = useState("");
+  const [country, setCountry] = useState("");
+  const [startTime, setStartTime] = useState("");
   return (
     <KeyboardAvoidingView style={styles.keyboardAvoidViewStyle}>
-      <ScrollView style={{height:height,width:width}}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={{ height: height, width: width }}>
         <View style={styles.mainContainerStyle}>
           <CommonInputView
-            title="Name :" 
+            title="Name :"
             value={name}
             onChangeText={setName}
             placeholder="Please enter name"
+            formTestId="name"
           />
           <CommonInputView
-            title="Surename :" 
+            title="Surename :"
             value={surename}
             onChangeText={setSurename}
             placeholder="Please enter Surename"
+            formTestId="sureName"
           />
-           <CommonInputView
-            title="Date of Birth :" 
+          <CommonInputView
+            title="Date of Birth :"
             value={dob}
             onChangeText={setDob}
             placeholder="Please enter DOB"
+            formTestId="dob"
           />
-           <CommonInputView
-            title="Start Day :" 
+          <CommonInputView
+            title="Start Day :"
             value={startDay}
             onChangeText={setStartDay}
             placeholder="Please enter start date"
+            formTestId="startDate"
           />
-           <CommonInputView
-            title="Address Line one :" 
+
+          <CommonInputView
+            title="Address Line one :"
             value={addressLine1}
             onChangeText={setAddressLine1}
             placeholder="Please enter address line 1"
+            formTestId="addressLine1"
           />
-           <CommonInputView
-            title="Address Line two :" 
+          <CommonInputView
+            title="Address Line two :"
             value={addressLine2}
             onChangeText={setAddressLine2}
             placeholder="Please enter address line 2"
+            formTestId="addressLine2"
           />
-           <CommonInputView
-            title="City :" 
+          <CommonInputView
+            title="City :"
             value={city}
             onChangeText={setCity}
             placeholder="Please enter city"
+            formTestId="city"
+          />
+           <CommonInputView
+            title="Postal Code :"
+            value={postalCode}
+            onChangeText={setPostalCode}
+            placeholder="Please enter postal code"
+            formTestId="postalCode"
+          />
+          <CommonInputView
+            title="country :"
+            value={country}
+            onChangeText={setPostalCode}
+            placeholder="Please enter country"
+            formTestId="country"
+          />
+          <CommonInputView
+            title="Start Time :"
+            value={startTime}
+            onChangeText={setStartTime}
+            placeholder="Please enter start time"
+            formTestId="startTime"
           />
 
+          <View style={styles.emptyBottomView}></View>
 
 
 
@@ -120,6 +155,9 @@ const styles = StyleSheet.create({
   },
   keyboardAvoidViewStyle: {
     flex: 1
+  },
+  emptyBottomView: {
+    height: 80
   }
 
 });

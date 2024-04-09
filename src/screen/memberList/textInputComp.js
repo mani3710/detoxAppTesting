@@ -3,15 +3,29 @@ import {View,Text,TextInput,StyleSheet,Dimensions} from 'react-native';
 const {height,width} = Dimensions.get("screen");
 
 const CommonInputView = (props)=>{
+    const {
+        containerStyle,
+        titleLabelStyle,
+        textInputStyle,
+        onChangeText,
+        placeholder,
+        title,
+        value,
+        formTestId
+    } = props;
 
     return(
-        <View style={[styles.containerStyle, props.containerStyle]}>
-           <Text style={[styles.titleLabelStyle,props.titleLabelStyle]}>{props.title}</Text>
+        <View style={[styles.containerStyle, containerStyle]}>
+           <Text 
+           testID={`formTitle-${formTestId}`}
+           style={[styles.titleLabelStyle,titleLabelStyle]}
+           >{title}</Text>
           <TextInput
-          style={[styles.textInputStyle,props.textInputStyle]}
-          value={props.value}
-          onChangeText={props.onChangeText}  
-          placeholder={props.placeholder}
+          style={[styles.textInputStyle,textInputStyle]}
+          value={value}
+          onChangeText={onChangeText}  
+          placeholder={placeholder}
+          testID={`formInputFiled-${formTestId}`}
           />
         </View>
     );
